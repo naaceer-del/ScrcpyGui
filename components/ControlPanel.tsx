@@ -21,7 +21,11 @@ const TABS = [
   { id: "files", label: "Files", icon: Folder },
 ];
 
-export function ControlPanel() {
+export interface ControlPanelProps {
+  onOpenSettings: () => void;
+}
+
+export function ControlPanel({ onOpenSettings }: ControlPanelProps) {
   const [activeTab, setActiveTab] = useState(TABS[0].id);
 
   return (
@@ -55,7 +59,10 @@ export function ControlPanel() {
           );
         })}
         <div className="ml-auto flex items-center">
-          <button className="p-2 text-neutral-400 hover:text-white transition-colors rounded-lg hover:bg-neutral-800">
+          <button
+            onClick={onOpenSettings}
+            className="p-2 text-neutral-400 hover:text-white transition-colors rounded-lg hover:bg-neutral-800"
+          >
             <Settings className="w-5 h-5" />
           </button>
         </div>
