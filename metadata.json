@@ -1,0 +1,5 @@
+{
+  "name": "Scrcpy Web GUI",
+  "description": "A feature-rich, compact PC-focused frontend interface for scrcpy, facilitating calls, messages, file transfers, and remote phone control.",
+  "requestFramePermissions": []
+}
